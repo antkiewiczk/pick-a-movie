@@ -1,0 +1,12 @@
+// common
+@import './style/common/base.scss';
+@import './style/common/reset.scss';
+
+//components
+@import './style/components/decision-buttons.scss';
+@import './style/components/movie-summary.scss';
+@import './style/components/overlap.scss';
+@import './style/components/text.scss';
+
+//layouts
+@import './style/layouts/movie.scss';

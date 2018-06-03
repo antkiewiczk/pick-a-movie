@@ -1,0 +1,35 @@
+.like,
+.reject {
+    height: 3em;
+    font-size: 1.6em;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  &:hover {
+    cursor: pointer;
+  }
+  .copy {
+    text-transform: capitalize;
+  }
+}
+
+.like {
+  & > span {
+    color: $c-like;
+  }
+  &__icon {
+    position: absolute;
+    left: -1.1em;
+  }
+}
+
+.reject {
+  & > span {
+    color: $c-important;
+  }
+  &__icon {
+    position: absolute;
+    right: -1.1em;
+  }
+}

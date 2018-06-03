@@ -1,0 +1,25 @@
+.overlap {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    opacity: 0;
+    pointer-events: none; 
+    @media #{$sm-up} {
+      display: none; 
+    }
+    & > h1 {
+      color: $c-white;
+    }
+    &__reject {
+      @extend .overlap;
+      background-color: $c-important;
+    }
+    &__like {
+      @extend .overlap;
+      background-color: $c-like;
+    }
+  }

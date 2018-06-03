@@ -1,0 +1,33 @@
+[
+    {
+      "id": "1",
+      "imageURL": "https://larasbookclub.files.wordpress.com/2016/11/inferno-movie.jpg",
+      "title": "Inferno",
+      "summary": "When Robert Langdon wakes up in an Italian hospital with amnesia, he teams up with Dr. Sienna Brooks, and together they must race across Europe against the clock to foil a deadly global plot.",
+      "rating": 5.3
+    },{
+      "id": "2",
+      "imageURL": "https://images-na.ssl-images-amazon.com/images/I/814X0lSCJQL._SL1412_.jpg",
+      "title": "Star Wars: Episode VII - The Force Awakens",
+      "summary": "Three decades after the Empire's defeat, a new threat arises in the militant First Order. Stormtrooper defector Finn and the scavenger Rey are caught up in the Resistance's search for the missing Luke Skywalker.",
+      "rating": 6.0
+    },{
+      "id": "3",
+      "imageURL": "https://www.movieposter.com/posters/archive/main/67/MPW-33738",
+      "title": "Fight Club",
+      "summary": "An insomniac office worker, looking for a way to change his life, crosses paths with a devil-may-care soapmaker, forming an underground fight club that evolves into something much, much more.",
+      "rating": 8.3
+    },{
+      "id": "4",
+      "imageURL": "https://resizing.flixster.com/iloFjnn84y8urYdANaRyHwgiZJM=/206x305/v1.bTsxMTIwODQ5MTtqOzE3NjM0OzEyMDA7MTUzNjsyMDQ4",
+      "title": "American Beauty",
+      "summary": "A sexually frustrated suburban father has a mid-life crisis after becoming infatuated with his daughter's best friend.",
+      "rating": 8.1
+    },{
+      "id": "5",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/en/a/a7/Snatch_ver4.jpg",
+      "title": "Snatch",
+      "summary": "Unscrupulous boxing promoters, violent bookmakers, a Russian gangster, incompetent amateur robbers, and supposedly Jewish jewelers fight to track down a priceless stolen diamond.",
+      "rating": 7.6
+    }
+]

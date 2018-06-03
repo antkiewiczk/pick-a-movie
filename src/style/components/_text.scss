@@ -1,0 +1,35 @@
+.text,
+span {
+  font-family: $font-main;
+  color: $c-text;
+}
+
+.text {
+  font-size: 1.35em;
+  line-height: 1.4;
+  text-align: justify;
+}
+
+span {
+  font-size: 1.1em;
+}
+
+.headline {
+  font-family: $font-headline;
+  font-weight: $thin;
+  color: $c-text;
+  text-align: center;
+  line-height: 1.2;
+  &__primary {
+    @extend .headline;
+    font-size: 2.875em;
+  }
+  &__secondary {
+    @extend .headline;
+    font-size: 2.438em;
+  }
+  &__tertiary {
+    @extend .headline;
+    font-size: 2em;
+  }
+}

@@ -1,6 +1,7 @@
 {
   "homepage": "http://antkiewiczk.github.io/pick-a-movie",
   "name": "pick-a-movie",
+  "author": "Kamil Antkiewicz",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

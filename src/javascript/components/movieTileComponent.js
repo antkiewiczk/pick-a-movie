@@ -1,12 +1,7 @@
 import React, { Component } from 'react';
-import { render } from 'react-dom';
 import DecisionComponent from './decisionComponent';
 
 class MovieTileComponent extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   checkId() {
     const id = this.props.id; 
     return (id < this.props.numberOfMovies) ? this.displayMovieHtml() : this.displaySummaryHtml();

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { render } from 'react-dom';
 import MovieTileComponent from './movieTileComponent';
 import Swipeable from 'react-swipeable'
 

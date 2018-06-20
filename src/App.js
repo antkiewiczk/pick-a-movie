@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { render } from 'react-dom';
 import MoviesContainer from './javascript/containers/MoviesContainer';
 import { createStore, applyMiddleware } from 'redux';
-import { Provider, connect } from 'react-redux';
+import { Provider } from 'react-redux';
 import thunkMiddleware from 'redux-thunk';
 import appReducers from './javascript/redux/reducers/index';
 

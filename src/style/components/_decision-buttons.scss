@@ -12,6 +12,10 @@
   .copy {
     text-transform: capitalize;
   }
+  @media #{$sm-down} {
+    font-size: 0.9em;
+    height: 1.6em;
+  }
 }
 
 .like {

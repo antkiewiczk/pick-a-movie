@@ -3,6 +3,9 @@ export const rejectedMovies = (state = [], action) => {
       case 'ADD_REJECTED_MOVIE': {
         return [...state, action.payload];
       }
+      case 'RESET_REJECTED': {
+        return [null];
+      }
       default:
         return state;
     }

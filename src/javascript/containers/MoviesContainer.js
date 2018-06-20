@@ -1,8 +1,8 @@
-import {connect} from 'react-redux';
-import { addAcceptedMovie, addRejectedMovie } from '../redux/actions';
+import { connect } from 'react-redux';
+import { addAcceptedMovie, addRejectedMovie, resetAccepted, resetRejected } from '../redux/actions';
 import MoviesComponent from '../components/moviesComponent';
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
     movies: state.get('movies'),
     acceptedMovies: state.get('acceptedMovies'),
@@ -17,6 +17,12 @@ const mapDispatchToProps = (dispatch) => {
     },
     rejectMovie: (movie) => {
       dispatch(addRejectedMovie(movie));
+    },
+    resetAccepted: () => {
+      dispatch(resetAccepted());
+    },
+    resetRejected: () => {
+      dispatch(resetRejected());
     }
   }
 }

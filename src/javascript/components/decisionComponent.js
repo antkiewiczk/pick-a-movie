@@ -4,27 +4,27 @@ class DecisionComponent extends Component {
   constructor() {
     super();
     this.state = {
-      role: '',
+      purpose: '',
     };
   }
 
   componentDidMount() {
-    const role = this.props.role;
-    this.setState({role})
+    const purpose = this.props.purpose;
+    this.setState({purpose})
   }
 
   chooseIcon() {
-     return (this.state.role === 'reject') ? 	'\u2715' : 	'\u2714';
+     return (this.state.purpose === 'reject') ? 	'\u2715' : 	'\u2714';
   }
 
   render() {
     return (
       <div 
-        className={this.state.role}
+        className={this.state.purpose}
         onClick={this.props.onClick}
       >
-        <span className="copy">{this.state.role}</span>      
-        <span className={`${this.state.role}__icon`}>{this.chooseIcon()}</span>
+        <span className="copy">{this.state.purpose}</span>      
+        <span className={`${this.state.purpose}__icon`}>{this.chooseIcon()}</span>
       </div>
     );
   }

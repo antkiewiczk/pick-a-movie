@@ -8,6 +8,9 @@ span {
   font-size: 1.35em;
   line-height: 1.4;
   text-align: justify;
+  @media #{$sm-down} {
+    font-size: 1em;
+  }
 }
 
 span {
@@ -31,5 +34,31 @@ span {
   &__tertiary {
     @extend .headline;
     font-size: 2em;
+  }
+  @media #{$sm-down} {
+    &__primary {
+      font-size: 1.4em;
+    }
+    &__secondary {
+      font-size: 1.1em;
+    }
+    &__tertiary {
+      font-size: 0.9em;
+    }
+  }
+}
+
+.align-left {
+  text-align: left;
+  position: relative;
+  display: inline-block;
+  &:after {
+    content: '';
+    height: 3px;
+    width: 100%;
+    background: $c-highlight;
+    position: absolute;
+    bottom: -12px;
+    left: 0;
   }
 }

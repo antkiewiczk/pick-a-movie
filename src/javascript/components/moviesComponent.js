@@ -9,17 +9,6 @@ class MoviesComponent extends Component {
       recommendations: this.props.movies,
       ratedReccomendations: 0,
     }
-    this.currentReccomendationId(this.props);
-  }
-
-  componentWillReceiveProps(nextProps) {
-    this.currentReccomendationId(nextProps);
-  }
-
-  currentReccomendationId(props) {
-    this.setState({
-      ratedReccomendations: props.acceptedMovies.length + props.rejectedMovies.length
-    })
   }
 
   get currentReccomendation() {
@@ -29,35 +18,33 @@ class MoviesComponent extends Component {
   displayRecommendation() {
     const movies = [];
 
-    this.state.recommendations.map((movie) => {
+    this.state.recommendations.forEach((movie) => {
       movies.push([movie.id, movie.imageURL, movie.title, movie.summary, movie.rating]);
     }
     )
-    this.passMovieQuantity(movies);
     return movies[this.state.ratedReccomendations];
   }
 
-  passMovieQuantity(movies) {
-    const quantity = this.state.recommendations.length;
-    return quantity;
-  }
-
-  rateMovie(rating) {
+  rateMovie = rating => {
+    let { ratedReccomendations } = this.state; 
     if (rating === 'like') {
       this.props.acceptMovie(this.currentReccomendation)
     } else {
       this.props.rejectMovie(this.currentReccomendation);
     }
+    this.setState({
+      ratedReccomendations: ratedReccomendations += 1,
+    })
   }
 
-  swipedLeft(e, absX) {
+  swipedLeft = (e, absX) => {
     this.clearOverlap();
     if (absX > 100) {
       this.rateMovie('reject');
     }
   }
 
-  swipedRight(e, absX) {
+  swipedRight = (e, absX) => {
     this.clearOverlap();
     if (absX < -100) {
       this.rateMovie('like');
@@ -68,7 +55,7 @@ class MoviesComponent extends Component {
     const overlap = document.querySelectorAll('.overlap');
     const overlapArray = Array.apply(null, overlap);
 
-    overlapArray.map( item => {
+    overlapArray.forEach( item => {
       item.style.opacity = 0;
     })
   }
@@ -87,21 +74,31 @@ class MoviesComponent extends Component {
     }
   }
 
+  resetProgress = () => {
+    this.props.resetAccepted();
+    this.props.resetRejected();
+    this.setState({
+      ratedReccomendations: 0,
+    })
+  }
+
   render() {
+    const { recommendations, ratedReccomendations } = this.state;
     return (
       <div>
         <Swipeable
-          onSwipedRight={this.swipedRight.bind(this)}
-          onSwipedLeft={this.swipedLeft.bind(this)}
+          onSwipedRight={this.swipedRight}
+          onSwipedLeft={this.swipedLeft}
           onSwipingLeft={this.swipingLeft}
           onSwipingRight={this.swipingRight}>
           <MovieTileComponent
-            id={this.state.ratedReccomendations}
+            id={ratedReccomendations}
             movie={this.displayRecommendation()}
-            saveDecision={this.rateMovie.bind(this)}
+            saveDecision={this.rateMovie}
             acceptedMovies={this.props.acceptedMovies}
             rejectedMovies={this.props.rejectedMovies}
-            numberOfMovies={this.passMovieQuantity()}
+            numberOfMovies={recommendations.length}
+            resetProgress={this.resetProgress}
           />
         </Swipeable>
       </div>

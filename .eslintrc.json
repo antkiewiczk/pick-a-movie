@@ -1,12 +1,13 @@
 {
+    "parser": "babel-eslint",
     "env": {
-        "browser": true,
-        "commonjs": true,
-        "es6": true
+        "es6": true,
+        "browser": true
     },
     "extends": [
-        "eslint:recommended",
-        "plugin:react/recommended"
+        "prettier",
+        "prettier/react",
+        "airbnb"
     ],
     "parserOptions": {
         "ecmaFeatures": {
@@ -16,7 +17,7 @@
         "sourceType": "module"
     },
     "plugins": [
-        "react"
+        "prettier"
     ],
     "rules": {
         "indent": [
@@ -34,6 +35,24 @@
         "semi": [
             "error",
             "always"
+        ],
+        "react/jsx-filename-extension": [
+            0
+        ],
+        "react/jsx-indent": [
+            2,
+            2
+        ],
+        "react/jsx-indent-props": [
+            2,
+            2
+        ],
+        "arrow-parens": [
+            2,
+            "as-needed",
+            {
+                "requireForBlockBody": false
+            }
         ]
     }
 }

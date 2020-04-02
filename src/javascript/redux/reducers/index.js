@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux-immutable';
 
-import { movies } from './movies.js';
-import { acceptedMovies } from './acceptedMovies.js';
-import { rejectedMovies } from './rejectedMovies.js';
+import movies from './movies';
+import acceptedMovies from './acceptedMovies';
+import rejectedMovies from './rejectedMovies';
 
 const appReducers = combineReducers({
   movies,

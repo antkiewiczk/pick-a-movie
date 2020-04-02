@@ -1,29 +1,38 @@
-import React, { Component } from 'react';
-import MoviesContainer from './javascript/containers/MoviesContainer';
-import { createStore, applyMiddleware } from 'redux';
+import React from 'react';
+import { createStore, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
 import thunkMiddleware from 'redux-thunk';
-import appReducers from './javascript/redux/reducers/index';
 
-import './App.css';
+// components
+import MoviesContainer from './javascript/containers/MoviesContainer';
+
+// redux
+import appReducers from './javascript/redux/reducers';
+
+// styles
+import './App.scss';
+
+// logo
+import logo from './images/logo.png';
+
+const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose; // eslint-disable-line
 
 const store = createStore(
-  appReducers, 
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
-  applyMiddleware(thunkMiddleware)
+  appReducers,
+  composeEnhancer(applyMiddleware(thunkMiddleware)),
 );
 
-class App extends Component {
-
-  render() {
-    return (
-      <Provider store = { store }>
-        <div className="movie">
-          <MoviesContainer />
-        </div>
-      </Provider>
-    );
-  }
-}
+const App = () => (
+  <Provider store={store}>
+    <div>
+      <div className="container">
+        <img src={logo} alt="logo" className="logo" />
+      </div>
+      <div className="movie">
+        <MoviesContainer />
+      </div>
+    </div>
+  </Provider>
+);
 
 export default App;

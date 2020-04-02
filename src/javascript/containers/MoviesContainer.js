@@ -1,35 +1,34 @@
 import { connect } from 'react-redux';
-import { addAcceptedMovie, addRejectedMovie, resetAccepted, resetRejected } from '../redux/actions';
-import MoviesComponent from '../components/moviesComponent';
+import {
+  addAcceptedMovie,
+  addRejectedMovie,
+  resetAccepted,
+  resetRejected,
+} from '../redux/actions';
+import Movies from '../components/Movies';
 
-const mapStateToProps = state => {
-  return {
-    movies: state.get('movies'),
-    acceptedMovies: state.get('acceptedMovies'),
-    rejectedMovies: state.get('rejectedMovies'),
-  }
-}
+const mapStateToProps = state => ({
+  movies: state.get('movies'),
+  acceptedMovies: state.get('acceptedMovies'),
+  rejectedMovies: state.get('rejectedMovies'),
+});
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    acceptMovie: (movie) => {
-      dispatch(addAcceptedMovie(movie));
-    },
-    rejectMovie: (movie) => {
-      dispatch(addRejectedMovie(movie));
-    },
-    resetAccepted: () => {
-      dispatch(resetAccepted());
-    },
-    resetRejected: () => {
-      dispatch(resetRejected());
-    }
-  }
-}
+const mapDispatchToProps = dispatch => ({
+  acceptMovie: movie => {
+    dispatch(addAcceptedMovie(movie));
+  },
+  rejectMovie: movie => {
+    dispatch(addRejectedMovie(movie));
+  },
+  resetProgress: () => {
+    dispatch(resetAccepted());
+    dispatch(resetRejected());
+  },
+});
 
 const MoviesContainer = connect(
   mapStateToProps,
-  mapDispatchToProps
-)(MoviesComponent);
+  mapDispatchToProps,
+)(Movies);
 
 export default MoviesContainer;

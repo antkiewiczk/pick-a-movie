@@ -13,8 +13,7 @@ $semibold: 600;
 $bold: 700;
 
 //fonts
-$font-main: 'Raleway', sans-serif;
-$font-headline: 'Roboto Mono', monospace;
+$font-main: 'Merriweather', serif;
 
 //breakpoints
 $md-down: '(max-width: 1200px)';
@@ -28,7 +27,8 @@ body {
   background-color: $c-background;
   position: relative;
   max-width: 100vw;
-  overflow-x: hidden; 
+  overflow-x: hidden;
+  font-family: $font-main;
   @media #{$md-down} {
     font-size: 15px;
   }
@@ -38,11 +38,12 @@ body {
   @media #{$xs-down} {
     font-size: 11px;
   }
-}
 
-
-.movie {
-  .red {
-    background-color: red;
+  .logo {
+    margin-top: 1rem;
+    width: 120px;
+    @media #{$sm-down} {
+      width: 90px;
+    }
   }
 }

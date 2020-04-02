@@ -1,6 +1,5 @@
 .text,
 span {
-  font-family: $font-main;
   color: $c-text;
 }
 
@@ -18,7 +17,6 @@ span {
 }
 
 .headline {
-  font-family: $font-headline;
   font-weight: $thin;
   color: $c-text;
   text-align: center;

@@ -1,6 +1,6 @@
 .movie__summary {
     background-color: $c-white;
-    box-shadow: 0px 20px 45px -20px rgba(25,25,255,0.6);
+    box-shadow: 0px 20px 45px -20px $c-highlight;
     padding: 1.2em 1em;
     .headline {
       &__primary {

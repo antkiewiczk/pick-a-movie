@@ -55,6 +55,7 @@ class MovieTile extends Component {
   }
 
   displaySummaryHtml() {
+    const { resetProgress } = this.props;
     return (
       <div className="container">
         <div className="movie__summary" style={{ opacity: 1 }}>
@@ -71,7 +72,7 @@ class MovieTile extends Component {
             Your favourite genres:
           </h2>
           <p className="text">{this.listFavouriteGenres()}</p>
-          <button onClick={() => this.props.resetProgress()} type="button">
+          <button onClick={resetProgress} type="button">
             Reset
           </button>
         </div>
@@ -94,9 +95,13 @@ class MovieTile extends Component {
       <div className="container">
         <div className="overlap overlap__reject">
           <h1 className="headline__primary">Reject</h1>
+          <br />
+          <h1 className="headline__primary">{'\u2716'}</h1>
         </div>
         <div className="overlap overlap__like">
           <h1 className="headline__primary">Like</h1>
+          <br />
+          <h1 className="headline__primary">{'\u2665'}</h1>
         </div>
         <div className="movie__tile">
           <div className="row">
@@ -144,6 +149,7 @@ MovieTile.propTypes = {
   rejectedMovies: PropTypes.arrayOf(PropTypes.shape({})),
   favouriteGenre: PropTypes.shape({}).isRequired,
   numberOfMovies: PropTypes.number.isRequired,
+  resetProgress: PropTypes.func.isRequired,
   id: PropTypes.number.isRequired,
   saveDecision: PropTypes.func.isRequired,
   movie: PropTypes.shape({

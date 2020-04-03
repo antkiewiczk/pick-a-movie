@@ -3,9 +3,8 @@ import PropTypes from 'prop-types';
 
 const Decision = ({ decision, saveDecision }) => (
   <button className={decision} onClick={() => saveDecision(decision)} type="button">
-    <span className="copy">{decision}</span>
     <span className={`${decision}__icon`}>
-      {decision === 'reject' ? '\u2715' : '\u2714'}
+      {decision === 'reject' ? '\u2716' : '\u2665'}
     </span>
   </button>
 );

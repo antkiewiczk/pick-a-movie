@@ -1,39 +1,39 @@
 .like,
 .reject {
-    height: 3em;
+    padding: 1rem;
+    border-radius: 50%;
+    width: 58px;
+    height: 58px;
     font-size: 1.6em;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: background-color 0.15s ease-in-out;
+    &>span {
+      color: $c-white;
+    }
   &:hover {
     cursor: pointer;
   }
-  .copy {
-    text-transform: capitalize;
-  }
   @media #{$sm-down} {
-    font-size: 0.9em;
-    height: 1.6em;
+    font-size: 1.2em;
+    padding: 0.8rem;
+    height: 2.2em;
+    width: 2.2em;
   }
 }
 
 .like {
-  & > span {
-    color: $c-like;
-  }
-  &__icon {
-    position: absolute;
-    left: -1.1em;
+  background-color: $c-like;
+  &:hover {
+    background-color: darken($c-like, 10%);
   }
 }
 
 .reject {
-  & > span {
-    color: $c-important;
-  }
-  &__icon {
-    position: absolute;
-    right: -1.1em;
+  background-color: $c-important;
+  &:hover {
+    background-color: darken($c-important, 10%);
   }
 }

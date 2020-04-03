@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 // components
 import Decision from './Decision';
 
-
 class MovieTile extends Component {
   checkId() {
     const { id, numberOfMovies } = this.props;
@@ -40,6 +39,21 @@ class MovieTile extends Component {
     return listRejectedMovies.join(', ');
   }
 
+  listFavouriteGenres() {
+    const { favouriteGenre } = this.props;
+
+    const arr = [];
+    Object.keys(favouriteGenre).map(genre => {
+      arr.push({ name: genre, value: favouriteGenre[genre] });
+    });
+
+    arr.sort((a, b) => a.value - b.value)
+      .splice(0, arr.length - 3);
+
+    const names = arr.map(el => el.name);
+    return names.join(', ');
+  }
+
   displaySummaryHtml() {
     return (
       <div className="container">
@@ -53,6 +67,10 @@ class MovieTile extends Component {
             Movies you rejected:
           </h2>
           <p className="text">{this.listRejectedMovies()}</p>
+          <h2 className="headline__tertiary align-left">
+            Your favourite genres:
+          </h2>
+          <p className="text">{this.listFavouriteGenres()}</p>
           <button onClick={() => this.props.resetProgress()} type="button">
             Reset
           </button>
@@ -107,14 +125,8 @@ class MovieTile extends Component {
 
           <div className="row">
             <div className="movie__decision">
-              <Decision
-                saveDecision={saveDecision}
-                decision="like"
-              />
-              <Decision
-                saveDecision={saveDecision}
-                decision="reject"
-              />
+              <Decision saveDecision={saveDecision} decision="like" />
+              <Decision saveDecision={saveDecision} decision="reject" />
             </div>
           </div>
         </div>
@@ -128,8 +140,9 @@ class MovieTile extends Component {
 }
 
 MovieTile.propTypes = {
-  acceptedMovies: PropTypes.arrayOf(PropTypes.string),
-  rejectedMovies: PropTypes.arrayOf(PropTypes.string),
+  acceptedMovies: PropTypes.arrayOf(PropTypes.shape({})),
+  rejectedMovies: PropTypes.arrayOf(PropTypes.shape({})),
+  favouriteGenre: PropTypes.shape({}).isRequired,
   numberOfMovies: PropTypes.number.isRequired,
   id: PropTypes.number.isRequired,
   saveDecision: PropTypes.func.isRequired,
@@ -139,12 +152,13 @@ MovieTile.propTypes = {
     summary: PropTypes.string,
     imageName: PropTypes.string,
     rating: PropTypes.number,
-  }).isRequired,
+  }),
 };
 
 MovieTile.defaultProps = {
   acceptedMovies: [],
   rejectedMovies: [],
+  movie: {},
 };
 
 export default MovieTile;

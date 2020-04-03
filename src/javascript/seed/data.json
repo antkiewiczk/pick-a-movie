@@ -1,51 +1,146 @@
 [
-    {
-      "id": 1,
-      "imageName": "inferno.jpg",
-      "title": "Inferno",
-      "summary": "When Robert Langdon wakes up in an Italian hospital with amnesia, he teams up with Dr. Sienna Brooks, and together they must race across Europe against the clock to foil a deadly global plot.",
-      "rating": 5.3
-    },{
-      "id": 2,
-      "imageName": "star_wars.jpg",
-      "title": "Star Wars: Episode VII - The Force Awakens",
-      "summary": "Three decades after the Empire's defeat, a new threat arises in the First Order. Stormtrooper defector Finn and the scavenger Rey are caught up in search for Luke Skywalker.",
-      "rating": 6.0
-    },{
-      "id": 3,
-      "imageName": "fight_club.jpeg",
-      "title": "Fight Club",
-      "summary": "An insomniac office worker, looking for a way to change his life, crosses paths with a devil-may-care soapmaker, forming an underground fight club that evolves into something much, much more.",
-      "rating": 8.3
-    },{
-      "id": 4,
-      "imageName": "american_beauty.jpg",
-      "title": "American Beauty",
-      "summary": "A sexually frustrated suburban father has a mid-life crisis after becoming infatuated with his daughter's best friend.",
-      "rating": 8.1
-    },{
-      "id": 5,
-      "imageName": "snatch.jpg",
-      "title": "Snatch",
-      "summary": "Unscrupulous boxing promoters, violent bookmakers, a Russian gangster, incompetent amateur robbers, and supposedly Jewish jewelers fight to track down a priceless stolen diamond.",
-      "rating": 7.6
-    },{
-      "id": 6,
-      "imageName": "memento.jpg",
-      "title": "Memento",
-      "summary": "A man juggles searching for his wife's murderer and keeping his short-term memory loss from being an obstacle.",
-      "rating": 8.5
-    },{
-      "id": 7,
-      "imageName": "gran_torino.jpg",
-      "title": "Gran Torino",
-      "summary": "Disgruntled Korean War veteran Walt Kowalski sets out to reform his neighbor, a Hmong teenager who tried to steal Kowalski's prized possession: a 1972 Gran Torino.",
-      "rating": 8.1
-    },{
-      "id": 8,
-      "imageName": "black_swan.jpg",
-      "title": "Black Swan",
-      "summary": "A committed dancer wins the lead role in a production of Tchaikovsky's \"Swan Lake\" only to find herself struggling to maintain her sanity.",
-      "rating": 8.0
-    }
+  {
+    "id": 1,
+    "imageName": "inferno.jpg",
+    "title": "Inferno",
+    "summary": "When Robert Langdon wakes up in an Italian hospital with amnesia, he teams up with Dr. Sienna Brooks, and together they must race across Europe against the clock to foil a deadly global plot.",
+    "genre": ["action", "adventure", "crime"],
+    "rating": 5.3
+  },
+  {
+    "id": 2,
+    "imageName": "star_wars.jpg",
+    "title": "Star Wars: Episode VII - The Force Awakens",
+    "summary": "Three decades after the Empire's defeat, a new threat arises in the First Order. Stormtrooper defector Finn and the scavenger Rey are caught up in search for Luke Skywalker.",
+    "genre": ["action", "adventure", "sci-fi"],
+    "rating": 6.0
+  },
+  {
+    "id": 3,
+    "imageName": "fight_club.jpeg",
+    "title": "Fight Club",
+    "summary": "An insomniac office worker, looking for a way to change his life, crosses paths with a devil-may-care soapmaker, forming an underground fight club that evolves into something much, much more.",
+    "genre": ["drama"],
+    "rating": 8.3
+  },
+  {
+    "id": 4,
+    "imageName": "american_beauty.jpg",
+    "title": "American Beauty",
+    "summary": "A sexually frustrated suburban father has a mid-life crisis after becoming infatuated with his daughter's best friend.",
+    "genre": ["drama"],
+    "rating": 8.1
+  },
+  {
+    "id": 5,
+    "imageName": "snatch.jpg",
+    "title": "Snatch",
+    "summary": "Unscrupulous boxing promoters, violent bookmakers, a Russian gangster, incompetent amateur robbers, and supposedly Jewish jewelers fight to track down a priceless stolen diamond.",
+    "genre": ["comedy", "crime"],
+    "rating": 7.6
+  },
+  {
+    "id": 6,
+    "imageName": "memento.jpg",
+    "title": "Memento",
+    "summary": "A man juggles searching for his wife's murderer and keeping his short-term memory loss from being an obstacle.",
+    "genre": ["mystery", "thriller"],
+    "rating": 8.5
+  },
+  {
+    "id": 7,
+    "imageName": "gran_torino.jpg",
+    "title": "Gran Torino",
+    "summary": "Disgruntled Korean War veteran Walt Kowalski sets out to reform his neighbor, a Hmong teenager who tried to steal Kowalski's prized possession: a 1972 Gran Torino.",
+    "genre": ["drama"],
+    "rating": 8.1
+  },
+  {
+    "id": 8,
+    "imageName": "black_swan.jpg",
+    "title": "Black Swan",
+    "summary": "A committed dancer wins the lead role in a production of Tchaikovsky's \"Swan Lake\" only to find herself struggling to maintain her sanity.",
+    "genre": ["drama", "thriller"],
+    "rating": 8.0
+  },
+  {
+    "id": 9,
+    "imageName": "lady_bird.jpg",
+    "title": "Lady Bird",
+    "summary": "In 2002, an artistically inclined seventeen-year-old girl comes of age in Sacramento, California.",
+    "genre": ["drama", "comedy"],
+    "rating": 7.4
+  },
+  {
+    "id": 10,
+    "imageName": "sex_and_the_city.jpg",
+    "title": "Sex and the City",
+    "summary": "A New York City writer on sex and love is finally getting married to her Mr. Big. But her three best girlfriends must console her after one of them inadvertently leads Mr. Big to jilt her.",
+    "genre": ["drama", "comedy", "romance"],
+    "rating": 5.6
+  },
+  {
+    "id": 11,
+    "imageName": "toy_story.jpg",
+    "title": "Toy Story",
+    "summary": "A cowboy doll is profoundly threatened and jealous when a new spaceman figure supplants him as top toy in a boy's room.",
+    "genre": ["animation", "comedy", "adventure"],
+    "rating": 8.3
+  },
+  {
+    "id": 12,
+    "imageName": "indiana_jones.jpg",
+    "title": "Indiana Jones and the Last Crusade",
+    "summary": "In 1938, after his father Professor Henry Jones, Sr. goes missing while pursuing the Holy Grail, Professor Henry 'Indiana' Jones, Jr. finds himself up against Adolf Hitler's Nazis again to stop them from obtaining its powers.",
+    "genre": ["action", "adventure"],
+    "rating": 8.2
+  },
+  {
+    "id": 13,
+    "imageName": "fifty_shades.jpg",
+    "title": "Fifty Shades of Grey",
+    "summary": "Literature student Anastasia Steele's life changes forever when she meets handsome, yet tormented, billionaire Christian Grey.",
+    "genre": ["drama", "romance", "thriller"],
+    "rating": 4.1
+  },
+  {
+    "id": 14,
+    "imageName": "spiderman.jpg",
+    "title": "Spider-Man: Far from Home",
+    "summary": "Following the events of Avengers: Endgame (2019), Spider-Man must step up to take on new threats in a world that has changed forever.",
+    "genre": ["action", "adventure", "sci-fi"],
+    "rating": 7.5
+  },
+  {
+    "id": 15,
+    "imageName": "alien.jpg",
+    "title": "Alien",
+    "summary": "After a space merchant vessel receives an unknown transmission as a distress call, one of the crew is attacked by a mysterious life form and they soon realize that its life cycle has merely begun.",
+    "genre": ["horror", "sci-fi"],
+    "rating": 8.4
+  },
+  {
+    "id": 16,
+    "imageName": "the_shining.jpg",
+    "title": "The Shining",
+    "summary": "A family heads to an isolated hotel for the winter where a sinister presence influences the father into violence, while his psychic son sees horrific forebodings from both past and future.",
+    "genre": ["horror", "drama"],
+    "rating": 8.4
+  },
+  {
+    "id": 17,
+    "imageName": "beauty_beast.jpg",
+    "title": "Beauty and the Beast",
+    "summary": "A prince cursed to spend his days as a hideous monster sets out to regain his humanity by earning a young woman's love.",
+    "genre": ["animation", "family", "fantasy", "romance"],
+    "rating": 8.0
+  },
+  {
+    "id": 18,
+    "imageName": "true_romance.jpg",
+    "title": "True romance",
+    "summary": "In Detroit, a lonely pop culture geek marries a call girl, steals cocaine from her pimp, and tries to sell it in Hollywood. Meanwhile, the owners of the cocaine, the Mob, track them down in an attempt to reclaim it.",
+    "genre": ["crime", "romance"],
+    "rating": 7.9
+  }
 ]

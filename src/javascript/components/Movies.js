@@ -81,7 +81,7 @@ class Movies extends Component {
 
   render() {
     const { recommendations, ratedCount } = this.state;
-    const { acceptedMovies, rejectedMovies } = this.props;
+    const { acceptedMovies, rejectedMovies, favouriteGenre } = this.props;
 
     return (
       <Swipeable
@@ -96,6 +96,7 @@ class Movies extends Component {
           saveDecision={this.rateMovie}
           acceptedMovies={acceptedMovies}
           rejectedMovies={rejectedMovies}
+          favouriteGenre={favouriteGenre}
           numberOfMovies={recommendations.length}
           resetProgress={this.resetProgress}
         />
@@ -111,6 +112,7 @@ Movies.propTypes = {
   rejectedMovies: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
   acceptedMovies: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
   resetProgress: PropTypes.func.isRequired,
+  favouriteGenre: PropTypes.shape({}).isRequired,
 };
 
 export default Movies;

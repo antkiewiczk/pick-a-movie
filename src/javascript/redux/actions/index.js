@@ -5,3 +5,5 @@ export const addAcceptedMovie = createAction('ADD_ACCEPTED_MOVIE');
 export const addRejectedMovie = createAction('ADD_REJECTED_MOVIE');
 export const resetAccepted = createAction('RESET_ACCEPTED');
 export const resetRejected = createAction('RESET_REJECTED');
+export const favouriteGenre = createAction('ADD_FAVOURITE_GENRE');
+export const resetGenre = createAction('RESET_GENRES');

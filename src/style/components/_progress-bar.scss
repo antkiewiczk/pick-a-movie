@@ -1,0 +1,10 @@
+.progressBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    background: $c-highlight;
+    border-bottom-right-radius: 2px;
+    border-top-right-radius: 2px;
+    transition: width 0.15s ease-in-out;
+}

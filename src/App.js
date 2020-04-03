@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import thunkMiddleware from 'redux-thunk';
 
 // components
+import ProgressBarContainer from './javascript/containers/ProgressBarContainer';
 import MoviesContainer from './javascript/containers/MoviesContainer';
 
 // redux
@@ -25,6 +26,7 @@ const store = createStore(
 const App = () => (
   <Provider store={store}>
     <div>
+      <ProgressBarContainer />
       <div className="container">
         <img src={logo} alt="logo" className="logo" />
       </div>

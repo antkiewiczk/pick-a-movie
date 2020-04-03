@@ -2,10 +2,12 @@ import { connect } from 'react-redux';
 import {
   addAcceptedMovie,
   addRejectedMovie,
+  countRatedMovies,
   favouriteGenre,
   resetAccepted,
   resetRejected,
   resetGenre,
+  resetCount,
 } from '../redux/actions';
 import Movies from '../components/Movies';
 
@@ -24,10 +26,14 @@ const mapDispatchToProps = dispatch => ({
   rejectMovie: movie => {
     dispatch(addRejectedMovie(movie));
   },
+  countRatedMovies: count => {
+    dispatch(countRatedMovies(count));
+  },
   resetProgress: () => {
     dispatch(resetAccepted());
     dispatch(resetRejected());
     dispatch(resetGenre());
+    dispatch(resetCount());
   },
 });
 

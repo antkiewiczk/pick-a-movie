@@ -23,7 +23,7 @@ class Movies extends Component {
 
   rateMovie = rating => {
     let { ratedCount } = this.state;
-    const { rejectMovie, acceptMovie } = this.props;
+    const { rejectMovie, acceptMovie, countRatedMovies } = this.props;
     if (rating === 'like') {
       acceptMovie(this.currentReccomendation());
     } else {
@@ -31,7 +31,7 @@ class Movies extends Component {
     }
     this.setState({
       ratedCount: (ratedCount += 1),
-    });
+    }, countRatedMovies(ratedCount));
   };
 
   swipedLeft = (e, absX) => {
@@ -109,6 +109,7 @@ Movies.propTypes = {
   movies: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
   acceptMovie: PropTypes.func.isRequired,
   rejectMovie: PropTypes.func.isRequired,
+  countRatedMovies: PropTypes.func.isRequired,
   rejectedMovies: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
   acceptedMovies: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
   resetProgress: PropTypes.func.isRequired,

@@ -47,8 +47,7 @@ class MovieTile extends Component {
       arr.push({ name: genre, value: favouriteGenre[genre] });
     });
 
-    arr.sort((a, b) => a.value - b.value)
-      .splice(0, arr.length - 3);
+    arr.sort((a, b) => a.value - b.value).splice(0, arr.length - 3);
 
     const names = arr.map(el => el.name);
     return names.join(', ');
@@ -104,31 +103,26 @@ class MovieTile extends Component {
           <h1 className="headline__primary">{'\u2665'}</h1>
         </div>
         <div className="movie__tile">
-          <div className="row">
-            <div className="col-12">
-              <h1 className="movie__headline headline__primary">
-                {title}
-                {' '}
-                (
-                {rating}
-                /10)
-              </h1>
-            </div>
+          <div className="movie__image">
+            <img src={moviePoster} alt="movie-poster" />
           </div>
 
-          <div className="row">
-            <div className="movie__image col-lg-5 col-md-12">
-              <img src={moviePoster} alt="movie-poster" />
-            </div>
-            <div className="movie__description col-lg-7 col-md-12">
+          <div className="movie__content">
+            <h1 className="movie__headline headline__primary">
+              {title}
+              {' '}
+              (
+              {rating}
+              /10)
+            </h1>
+
+            <div className="movie__description">
               <h1 className="movie__headline headline__secondary">
-                Movie description:
+                Short description:
               </h1>
               <p className="text">{summary}</p>
             </div>
-          </div>
 
-          <div className="row">
             <div className="movie__decision">
               <Decision saveDecision={saveDecision} decision="like" />
               <Decision saveDecision={saveDecision} decision="reject" />
